@@ -3,18 +3,17 @@ import { defineStackbitConfig } from "@stackbit/types";
 import { GitContentSource } from "@stackbit/cms-git";
 
 export default defineStackbitConfig({
-  // Configure where your content lives
   contentSources: [
     new GitContentSource({
       rootPath: __dirname,
+      // Point to your Markdown pages and YAML data
       contentDirs: [
-        ".",      // for index.md and gala.md
-        "_data"   // for members.yml & former_members.yml
+        ".",      // index.md & gala.md
+        "_data"   // members.yml & former_members.yml
       ],
       models: [
         {
           name: "HomePage",
-          label: "Home Page",
           type: "page",
           urlPath: "/",
           filePath: "index.md",
@@ -25,7 +24,6 @@ export default defineStackbitConfig({
         },
         {
           name: "GalaPage",
-          label: "Gala Page",
           type: "page",
           urlPath: "/gala/",
           filePath: "gala.md",
@@ -36,24 +34,22 @@ export default defineStackbitConfig({
         },
         {
           name: "Member",
-          label: "House Member",
           type: "data",
           filePath: "_data/members.yml",
           fields: [
-            { name: "name",     type: "string", label: "Name", required: true },
-            { name: "title",    type: "string", label: "Title", required: true },
+            { name: "name",     type: "string", label: "Name",     required: true },
+            { name: "title",    type: "string", label: "Title",    required: true },
             { name: "subtitle", type: "string", label: "Subtitle" },
             { name: "image",    type: "string", label: "Portrait Path" }
           ]
         },
         {
           name: "FormerMember",
-          label: "Former Member",
           type: "data",
           filePath: "_data/former_members.yml",
           fields: [
-            { name: "name",     type: "string", label: "Name", required: true },
-            { name: "title",    type: "string", label: "Title", required: true },
+            { name: "name",     type: "string", label: "Name",     required: true },
+            { name: "title",    type: "string", label: "Title",    required: true },
             { name: "subtitle", type: "string", label: "Subtitle" },
             { name: "image",    type: "string", label: "Portrait Path" }
           ]
@@ -61,12 +57,7 @@ export default defineStackbitConfig({
       ]
     })
   ],
-  // Distinguish which models act as pages
-  modelExtensions: [
-    { name: "HomePage", type: "page" },
-    { name: "GalaPage", type: "page" }
-  ],
-  // Map each page document to its URL
+  // Map each page document to its URL so the editor can navigate
   siteMap: ({ documents, models }) =>
     documents
       .filter(doc => models.some(m => m.name === doc.modelName && m.type === "page"))
