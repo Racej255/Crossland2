@@ -1,0 +1,16 @@
+<section id="members">
+  <h2>Our Members</h2>
+  <p>House Crossland comprises a varied group of individuals—each bringing unique ‘talents’ to our collective endeavors.</p>
+  <div class="member-list">
+    {% for m in site.data.members %}
+      <div class="member-card" onclick="openLightbox(event, '{{ m.image }}')">
+        <img src="{{ m.image }}" alt="{{ m.name }}">
+        <div class="member-info">
+          <h4>{{ m.name }}</h4>
+          <p>{{ m.title }}</p>
+          <p>{{ m.subtitle }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
