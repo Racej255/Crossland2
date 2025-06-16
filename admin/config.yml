@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: racej255/Crossland2
+  repo: racej255/crossland2
   branch: main
 
 media_folder: "assets/portraits"
@@ -9,7 +9,6 @@ public_folder: "/assets/portraits"
 collections:
   - name: "members"
     label: "House Members"
-    label_singular: "Member"
     folder: "_data"
     create: true
     delete: true
@@ -24,7 +23,6 @@ collections:
 
   - name: "former_members"
     label: "Former Members"
-    label_singular: "Former Member"
     folder: "_data"
     create: true
     delete: true
