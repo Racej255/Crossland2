@@ -1,0 +1,34 @@
+- name: Mason Manchester
+  title: Founding Member
+  subtitle: Returned to his Farm
+  image: assets/portraits/mason.png
+
+- name: Robert Broadwick
+  title: Founding Member
+  subtitle: Rest in Peace
+  image: assets/portraits/broadwick.png
+
+- name: Anthony Bikker
+  title: Founding Member
+  subtitle: Lost in the woods
+  image: assets/portraits/Anthony.png
+
+- name: Brother Harvest
+  title: Rest in Peace
+  subtitle: ""
+  image: assets/portraits/harvest.png
+
+- name: Daz Rock
+  title: Rest in Peace
+  subtitle: ""
+  image: assets/portraits/daz.png
+
+- name: Waylon Fox
+  title: The Boy
+  subtitle: Playing in the wheat
+  image: assets/portraits/waylon.png
+
+- name: Hector Greenfield
+  title: Keeper of Games
+  subtitle: Stuck in a well
+  image: assets/portraits/hector.png
