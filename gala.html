@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grand Crossland Gala - House Crossland</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <img src="House_emblem.png" alt="House Crossland Emblem" class="logo" />
+      <div>
+        <h1>Grand Crossland Gala</h1>
+        <p>Join us to celebrate Marcus Crossland's birthday, at his annual gala. A celebration not to be missed!</p>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html">Crossland Homepage</a>
+    </nav>
+  </header>
+  
+  <div class="container">
+    <section class="event-details">
+      <h2>Event Details</h2>
+      <div class="intro">
+        <p>🕯 A Grand Feast, A Night of Merriment, A Celebration Like No Other… 🕯 </p>
+        <p>Step into a world of grandeur as House Crossland welcomes you to the Grand Crossland Gala. Set within the historic Priest’s House, this is more than just a celebration—it’s a banquet of tradition, revelry, and spectacle. Raise a goblet of mulled wine, feast in a hall rich with history, and dance beneath the flickering glow of candlelight.</p>
+        <p>Whether you are a returning guest or experiencing the Gala for the first time, this is an evening you won’t want to miss.</p>
+      </div>
+      <p><strong>Date:</strong> 17th January 2026</p>
+      <p><strong>Time:</strong> 5:00pm - 11:30pm</p>
+      <p>
+        <strong>Location:</strong> The Priest's House, Barden Tower, Skipton BD23 6AS – Once a setting for noble feasts, this historic hall now opens its doors for our grandest celebration yet.
+        <a href="https://thepriestshouse.com/medieval-banquets/" target="_blank">Learn more about the venue</a>.
+      </p>
+    </section>
+    
+    <section class="schedule">
+      <h2>Example Schedule</h2>
+      <ul>
+        <li>🍷 <strong>17:00</strong> – Arrival: Mulled wine and warm welcomes.</li>
+        <li>⏰ <strong>17:30</strong> – Time-in Begins: Guests start settling in.</li>
+        <li>🏰 <strong>18:00</strong> – Banquet Hall Opens: Step inside for a feast worthy of legend.</li>
+        <li>🔥 <strong>20:15</strong> – Entertainment Begins: Prepare to be enthralled (2025 example: Fire dancing show).</li>
+        <li>🎻 <strong>21:00</strong> – Dancing & Celebration: Join the ceilidh or watch the revelry unfold.</li>
+        <li>⌛ <strong>23:00</strong> – Time-in Ends: The night winds down.</li>
+      </ul>
+      <p class="example-note">Note: Schedule is an example from 2025; the 2026 event may differ slightly.</p>
+    </section>
+    
+    <section class="menu">
+      <h2>Example Menu Options</h2>
+      <div class="menu-toggle">
+        <button id="standardBtn" class="active" onclick="showMenu('standard')">Standard Menu</button>
+        <button id="veganBtn" onclick="showMenu('vegan')">Vegetarian Menu</button>
+      </div>
+      <div id="standardMenu" class="menu-content active">
+        <ul>
+          <li>Mixed vegetable broth</li>
+          <li>Poacher's salmon with wild dressed leaves</li>
+          <li>Slow braised lamb shank, rosemary and red wine jus</li>
+          <li>King's meat stew (rich stew of venison, pheasant, rabbit, beef)</li>
+          <li>Tartlet of apple and ginger with cinder ice cream</li>
+          <li>Cheeseboards</li>
+        </ul>
+      </div>
+      <div id="veganMenu" class="menu-content">
+        <ul>
+          <li>Mixed vegetable broth</li>
+          <li>Almond Fritter, chickpea & saffron dip</li>
+          <li>Mixed nut tartlet, peas, parsley and mint sauce</li>
+          <li>Butternut Squash & Mushroom wellington</li>
+          <li>Poached pears in spiced red wine</li>
+          <li>Cheeseboards</li>
+        </ul>
+      </div>
+      <p class="example-note">Note: Menus are examples from 2025; the 2026 event menu may vary.</p>
+    </section>
+    
+    <section class="payment">
+      <h2>Costs & Payment</h2>
+      <p><strong>Total Price:</strong> £95 per guest</p>
+      <p><strong>Deposit:</strong> £45 to secure your position</p>
+      <p><strong>Remaining Balance:</strong> £50 due no later than 1st December (can be paid earlier)</p>
+      <p>
+        If you wish to set up a payment plan or make alternative arrangements, please contact Marcus Crossland (OC Name: Jordan Race)
+        at <a href="mailto:racej255@gmail.com">racej255@gmail.com</a>.
+      </p>
+      <p>
+        This price includes unlimited beer, wine, cider, and soft drinks. Guests will enjoy a night for the senses with sumptuous food, roaring entertainment, and memorable souvenirs.
+      </p>
+      <p><strong>Spaces:</strong> Limited to 40 guests</p>
+    </section>
+    
+    <section class="testimonials">
+      <h2>Testimonials</h2>
+      <blockquote>
+        "I have long admired Marcus Crossland – his charm is as enduring as the mulled wine served at these feasts."
+        <cite>— Maud of Buckley</cite>
+      </blockquote>
+      <blockquote>
+        "The splendor of the Marches was truly on display; candles have never burned so magnificently!"
+        <cite>— Halvind Brinegold</cite>
+      </blockquote>
+      <blockquote>
+        "I’m quite impressed that not a drop of water marred the floor. Now that’s a miracle!"
+        <cite>— Boggy Bill</cite>
+      </blockquote>
+      <blockquote>
+        "If only Dawn were this cool; this gala is a spectacle beyond compare."
+        <cite>— Lord Gilderai De Rondell</cite>
+      </blockquote>
+    </section>
+    
+    <section class="gallery">
+      <h2>Gallery of Previous Events</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item" onclick="openLightbox(event, 'gallery/gala01.png')">
+          <img src="gallery/gala01.png" alt="Gala Image 1" />
+        </div>
+        <div class="gallery-item" onclick="openLightbox(event, 'gallery/gala02.png')">
+          <img src="gallery/gala02.png" alt="Gala Image 2" />
+        </div>
+        <div class="gallery-item" onclick="openLightbox(event, 'gallery/gala03.png')">
+          <img src="gallery/gala03.png" alt="Gala Image 3" />
+        </div>
+        <div class="gallery-item" onclick="openLightbox(event, 'gallery/gala04.png')">
+          <img src="gallery/gala04.png" alt="Gala Image 4" />
+        </div>
+        <div class="gallery-item" onclick="openLightbox(event, 'gallery/gala05.png')">
+          <img src="gallery/gala05.png" alt="Gala Image 5" />
+        </div>
+        <div class="gallery-item" onclick="openLightbox(event, 'gallery/gala06.png')">
+          <img src="gallery/gala06.png" alt="Gala Image 6" />
+        </div>
+        <div class="gallery-item" onclick="openLightbox(event, 'gallery/gala07.png')">
+          <img src="gallery/gala07.png" alt="Gala Image 7" />
+        </div>
+        <div class="gallery-item" onclick="openLightbox(event, 'gallery/gala08.png')">
+          <img src="gallery/gala08.png" alt="Gala Image 8" />
+        </div>
+      </div>
+      <p style="text-align: center; margin-top: 15px;">
+        <a href="https://photos.app.goo.gl/NhJuSHREurN6i9AF9" class="full-gallery-btn">View Full Gallery</a>
+      </p>
+    </section>
+    
+    <section class="signup">
+      <h2>Sign Up</h2>
+      <p>Reserve your spot now! Click the button below to sign up for the Grand Crossland Gala.</p>
+      <p><a href="https://forms.gle/jDNQhZpQAwkT7Coz8">Sign Up Here</a></p>
+    </section>
+  </div>
+  
+  <!-- Floating Sign Up Button -->
+  <a href="https://forms.gle/jDNQhZpQAwkT7Coz8" class="floating-signup">Sign Up Now</a>
+  
+  <!-- Gallery Lightbox Modal -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close-btn">&times;</span>
+    <img id="lightbox-img" class="lightbox-img" alt="Expanded view" />
+    <button class="prev-btn" onclick="prevGalleryImage(event)">←</button>
+    <button class="next-btn" onclick="nextGalleryImage(event)">→</button>
+  </div>
+  
+  <script>
+    // Gallery lightbox functionality
+    var galleryImages = [
+      "gallery/gala01.png",
+      "gallery/gala02.png",
+      "gallery/gala03.png",
+      "gallery/gala04.png",
+      "gallery/gala05.png",
+      "gallery/gala06.png",
+      "gallery/gala07.png",
+      "gallery/gala08.png"
+    ];
+    var currentGalleryIndex = 0;
+    
+    function openLightbox(event, src) {
+      event.stopPropagation();
+      var lightbox = document.getElementById('lightbox');
+      var lightboxImg = document.getElementById('lightbox-img');
+      currentGalleryIndex = galleryImages.indexOf(src);
+      lightboxImg.src = src;
+      lightbox.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+    
+    function nextGalleryImage(event) {
+      event.stopPropagation();
+      currentGalleryIndex = (currentGalleryIndex + 1) % galleryImages.length;
+      document.getElementById('lightbox-img').src = galleryImages[currentGalleryIndex];
+    }
+    
+    function prevGalleryImage(event) {
+      event.stopPropagation();
+      currentGalleryIndex =
+        (currentGalleryIndex - 1 + galleryImages.length) % galleryImages.length;
+      document.getElementById('lightbox-img').src = galleryImages[currentGalleryIndex];
+    }
+    
+    // Toggle menu functionality
+    function showMenu(type) {
+      var standardBtn = document.getElementById('standardBtn');
+      var veganBtn = document.getElementById('veganBtn');
+      var standardMenu = document.getElementById('standardMenu');
+      var veganMenu = document.getElementById('veganMenu');
+      
+      if (type === 'standard') {
+        standardMenu.classList.add('active');
+        veganMenu.classList.remove('active');
+        standardBtn.classList.add('active');
+        veganBtn.classList.remove('active');
+      } else {
+        veganMenu.classList.add('active');
+        standardMenu.classList.remove('active');
+        veganBtn.classList.add('active');
+        standardBtn.classList.remove('active');
+      }
+    }
+  </script>
+</body>
+</html>
