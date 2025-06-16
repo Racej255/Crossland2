@@ -1,4 +1,9 @@
 title: House Crossland
+description: >-
+  House Crossland comprises a varied group of individuals—each bringing unique
+  talents to our collective endeavors.
+baseurl: ""  
+url: "https://racej255.github.io"
 markdown: kramdown
 theme: minima
 plugins: []
