@@ -3,13 +3,13 @@ import { defineStackbitConfig } from "@stackbit/types";
 import { GitContentSource } from "@stackbit/cms-git";
 
 export default defineStackbitConfig({
+  // Define where editable content lives
   contentSources: [
     new GitContentSource({
       rootPath: __dirname,
-      // Point to your Markdown pages and YAML data
       contentDirs: [
-        ".",      // index.md & gala.md
-        "_data"   // members.yml & former_members.yml
+        ".",      // Markdown pages (index.md, gala.md)
+        "_data"   // Data files (members.yml, former_members.yml)
       ],
       models: [
         {
@@ -57,7 +57,14 @@ export default defineStackbitConfig({
       ]
     })
   ],
-  // Map each page document to its URL so the editor can navigate
+
+  // Step 2: Distinguish which models represent pages
+  modelExtensions: [
+    { name: "HomePage", type: "page" },
+    { name: "GalaPage", type: "page" }
+  ],
+
+  // Map each page document to its URL for navigation in the editor
   siteMap: ({ documents, models }) =>
     documents
       .filter(doc => models.some(m => m.name === doc.modelName && m.type === "page"))
