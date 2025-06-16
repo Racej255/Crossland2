@@ -1,9 +1,9 @@
 // stackbit.config.ts
-import { defineStackbitConfig } from "@stackbit/types";
+import { defineStackbitConfig, SiteMapEntry } from "@stackbit/types";
 import { GitContentSource } from "@stackbit/cms-git";
 
 export default defineStackbitConfig({
-  // Define where editable content lives
+  // Define where your editable content lives
   contentSources: [
     new GitContentSource({
       rootPath: __dirname,
@@ -58,23 +58,31 @@ export default defineStackbitConfig({
     })
   ],
 
-  // Step 2: Distinguish which models represent pages
+  // Distinguish which models represent pages
   modelExtensions: [
     { name: "HomePage", type: "page" },
     { name: "GalaPage", type: "page" }
   ],
 
-  // Map each page document to its URL for navigation in the editor
-  siteMap: ({ documents, models }) =>
-    documents
-      .filter(doc => models.some(m => m.name === doc.modelName && m.type === "page"))
-      .map(document => {
-        const model = models.find(m => m.name === document.modelName)!;
-        return {
-          stableId: document.id,
-          urlPath: model.urlPath,
-          document,
-          isHomePage: document.filePath === "index.md"
-        };
-      })
+  // Connect page models to URLs for navigation
+  siteMap: ({ documents, models }): SiteMapEntry[] => {
+    // 1. Filter all page models
+    const pageModels = models.filter(m => m.type === "page");
+
+    return (
+      documents
+        // 2. Keep only docs of a page model
+        .filter(d => pageModels.some(m => m.name === d.modelName))
+        // 3. Map each to a SiteMapEntry
+        .map(d => {
+          const model = pageModels.find(m => m.name === d.modelName)!;
+          return {
+            stableId: d.id,
+            urlPath: model.urlPath,
+            document: d,
+            isHomePage: d.filePath === "index.md"
+          };
+        })
+    );
+  }
 });
