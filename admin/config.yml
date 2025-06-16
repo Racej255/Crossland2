@@ -1,0 +1,38 @@
+backend:
+  name: github
+  repo: racej255/Crossland2
+  branch: main
+
+media_folder: "assets/portraits"
+public_folder: "/assets/portraits"
+
+collections:
+  - name: "members"
+    label: "House Members"
+    label_singular: "Member"
+    folder: "_data"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: "yml"
+    format: "yaml"
+    fields:
+      - { name: "name", label: "Name", widget: "string" }
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "subtitle", label: "Subtitle", widget: "string" }
+      - { name: "image", label: "Portrait Path", widget: "image" }
+
+  - name: "former_members"
+    label: "Former Members"
+    label_singular: "Former Member"
+    folder: "_data"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: "yml"
+    format: "yaml"
+    fields:
+      - { name: "name", label: "Name", widget: "string" }
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "subtitle", label: "Subtitle", widget: "string" }
+      - { name: "image", label: "Portrait Path", widget: "image" }
