@@ -1,0 +1,44 @@
+- name: Marcus Crossland
+  title: House Steward
+  subtitle: Master of Opportunity
+  image: assets/portraits/Marcus.png
+
+- name: Bron Ashwood
+  title: Chief Negotiator
+  subtitle: Purveyor of Games
+  image: assets/portraits/bron.png
+
+- name: Elias Reede
+  title: Master of Cudgels
+  subtitle: Curator of Brawn
+  image: assets/portraits/elias.png
+
+- name: "Captain 'Daddy' Maxwell"
+  title: Security Overseer
+  subtitle: Collector of Secrets
+  image: assets/portraits/maxwell.png
+
+- name: Boggy Bill
+  title: Master of Vagabonds
+  subtitle: Fortune's Favorite
+  image: assets/portraits/bill.png
+
+- name: Richard Roper
+  title: Deal Broker
+  subtitle: Merchant of Delectables
+  image: assets/portraits/dick.png
+
+- name: Joshua Stone
+  title: Master of Arms
+  subtitle: Military Powerhouse
+  image: assets/portraits/joshua.png
+
+- name: Robert Crossland
+  title: House Bookkeeper
+  subtitle: Keeper of Coin
+  image: assets/portraits/robert.png
+
+- name: Sadie Raine
+  title: Opportunity Weaver
+  subtitle: Magical Liaison
+  image: assets/portraits/sadie.png
